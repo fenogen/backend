@@ -1,0 +1,22 @@
+{
+  "cats": [
+    {
+      "id": "f0a04cc0-56d2-4707-ab71-27a10e73dfb8",
+      "name": "Simon",
+      "age": 5,
+      "isVaccinated": false
+    },
+    {
+      "id": "c9c2896a-f170-47ab-b5b3-56f253d2e8c9",
+      "name": "Alex",
+      "age": 10,
+      "isVaccinated": false
+    },
+    {
+      "id": "7343904f-2369-4a4c-988b-91cb8198aafb",
+      "name": "Red",
+      "age": 25,
+      "isVaccinated": true
+    }
+  ]
+}
