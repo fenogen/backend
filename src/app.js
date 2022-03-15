@@ -8,12 +8,12 @@ const app = express()
 const {HttpCode} = require('./helpers/constants')
 const routerCats = require('./api/cats')
 
-// Включаем наш корс:
+// Включаем наш корс и Включаем джейсон(именно эти параметры будут отображатся в заголовке запроса и в Postman):
 app.use(cors())
-// Включаем джейсон:
 app.use(express.json())
 
 // Роутер подключили к мидлваре:
+// TODO: Указали нужный нам путь: /api/cats
 app.use('/api/cats', routerCats)
 // app.use('/api/v.1.5/cats', routerCats) - прописывают версию иногда и потом ее вручную можно поменять
 
@@ -23,6 +23,7 @@ app.use((req, res, next) =>{
     status: 'error',
     code: HttpCode.NOT_FOUND,
     message: `Use api on routes ${req.baseUrl}/api/cats`,
+    // TODO: Указали нужный нам путь: /api/cats
     data: 'Not Found',
     })
 })
